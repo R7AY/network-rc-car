@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="20dp"
+    >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="MQTT Broker"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="4"
+            app:srcCompat="@drawable/mqtt" />
+
+        <EditText
+            android:id="@+id/broker"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="tcp://10.21.26.227:1883" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:id="@+id/BrokerImage"
+            app:srcCompat="@drawable/disconnected" />
+
+        <TextView
+            android:id="@+id/BrokerState"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已关闭"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/brokerSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="RTMP Server"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="4"
+            app:srcCompat="@drawable/server" />
+
+        <EditText
+            android:id="@+id/server"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="192.168.2.6:1833/live" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:id="@+id/serverImage"
+            app:srcCompat="@drawable/disconnected" />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/serverState"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已关闭"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/upload"
+      />
+        <TextView
+            android:id="@+id/serverRate"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/serverSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="加速度"
+            android:id="@+id/edtjsd"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="磁场"
+            android:id="@+id/edtcc"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="定位"
+            android:id="@+id/edtdw"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="陀螺仪"
+            android:id="@+id/edttly"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="电量"
+            android:id="@+id/edtdl"
+            />
+        <!--    <TextView-->
+        <!--        android:layout_width="fill_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="收到的信息如下："-->
+        <!--        />-->
+        <!--    <TextView-->
+        <!--        android:layout_width="fill_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="xxx："-->
+        <!--        android:id="@+id/edtReceive"-->
+        <!--        />-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
