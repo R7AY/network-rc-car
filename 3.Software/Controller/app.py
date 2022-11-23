@@ -3,6 +3,7 @@
 
 
 import json
+import time
 import keyboard
 import cv2 as cv
 import numpy as np
@@ -208,6 +209,11 @@ def key_handle(key):
     # else:
     #     print(f"Failed to send message to topic {cmd_topic}")
 
+def cmd_push():
+    while True:
+        client.publish(cmd_topic, json.dumps(cmdx))
+        time.sleep(0.1)
+
 
 def diaplay_main():
 
@@ -216,9 +222,9 @@ def diaplay_main():
     font = cv.FONT_HERSHEY_SIMPLEX
     if stream.isOpened():
         while True:
-            #print(cmdx)
+            print(cmdx)
 
-            client.publish(cmd_topic, json.dumps(cmdx))
+            #client.publish(cmd_topic, json.dumps(cmdx))
 
             fps = round(stream.get(cv.CAP_PROP_FPS))
             ref, frame = stream.read()
@@ -303,8 +309,10 @@ if __name__ == '__main__':
     client.on_connect = on_connect
     client.connect(broker, port, keepalive)
 
-    # 建立键盘事件钩子
+    # 建立键盘事件钩子,并定时发送
     keyboard.hook(key_handle)
+    cmd_send = threading.Thread(target=cmd_push)
+    cmd_send.start()
 
     # 启动mqtt
     mqtt = threading.Thread(target=sub_msg_main_thread)
