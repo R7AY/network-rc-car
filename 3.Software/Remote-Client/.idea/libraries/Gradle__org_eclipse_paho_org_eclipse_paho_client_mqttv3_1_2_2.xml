@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.2/462e896b7dc5d123d1131241f6fe73d9d9ba5022/org.eclipse.paho.client.mqttv3-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../softWare/android/.gradle/caches/modules-2/files-2.1/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.2/462e896b7dc5d123d1131241f6fe73d9d9ba5022/org.eclipse.paho.client.mqttv3-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.2/852be62ab6b7f724f50502c2d48c5ef090d4db34/org.eclipse.paho.client.mqttv3-1.2.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../softWare/android/.gradle/caches/modules-2/files-2.1/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.2/852be62ab6b7f724f50502c2d48c5ef090d4db34/org.eclipse.paho.client.mqttv3-1.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
